@@ -1,0 +1,423 @@
+.dashboardd {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+}
+
+.dashboardd .charts {
+    width: 100vw;
+}
+
+.dashboardd .chart {
+    width: 100%;
+    height: 500px;
+}
+
+.dashboardd h1 {
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.334);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.dashboardd .machineInfo {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dashboardd .machineInfo .column {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.dashboardd .machineInfo .column h2 {
+    color: #004c58;
+}
+
+.dashboardd .machineInfo .column .field {
+    display: flex;
+    padding: 10px;
+}
+
+.dashboardd .machineInfo .column .field label {
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+.dashboardd .machineInfo .column .field button {
+    width: 200px;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #004c58;
+    color: #004c58;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.dashboardd .machineInfo .column .field button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px #004c588a;
+    background-color: #004c58;
+    color: white;
+}
+
+.dashboardd .console {
+    padding: 50px 100px;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.dashboardd .console h2 {
+    width: 100%;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dashboardd .console .container {
+    max-height: 500px;
+    background-color: rgba(27, 27, 27, 0.49);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border: 1px solid gray;
+    overflow: auto;
+
+    &&::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &&::-webkit-scrollbar-thumb {
+        background-color: white;
+    }
+
+    &&::-webkit-scrollbar-track {
+        background-color: black;
+    }
+}
+
+.dashboardd .console .container .row {
+    padding: 10px 0px;
+}
+
+.dashboardd .console .container .row .info {
+    color: white;
+    letter-spacing: 2px;
+}
+
+.dashboardd .console .container .row .warn {
+    color: yellow;
+    letter-spacing: 2px;
+}
+
+.dashboardd .console .container .row .err {
+    color: red;
+    letter-spacing: 2px;
+}
+
+.dashboardd .console .container .row .log {
+    color: white;
+    letter-spacing: 2px;
+}
+
+.dashboardd .console .btns {
+    display: flex;
+}
+
+.dashboardd .console .btns button {
+    margin: 10px;
+    padding: 5px 12px 6px 12px;
+    outline: 2px solid white;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.dashboardd .console .btns button:first-child {
+    margin-left: 0px;
+}
+
+.dashboardd .console .btns button:hover {
+    transform: scale(1.1);
+    background-color: #004c58;
+    box-shadow: 0px 10px 10px #004c587e;
+    border-radius: 0px;
+    outline: 2px solid #004c58;
+}
+
+.NoRunningServers {
+    background-color: white;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #004c58;
+    margin: 50px 0px;
+    letter-spacing: 2px;
+}
+
+.customChart {
+    background-color: white;
+    margin: 50px 0px;
+    padding: 50px 20px;
+}
+
+.chartOptions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartOptions select {
+    margin-right: 50px;
+    padding: 5px 12px 6px 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.trafficChart {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    height: 400px;
+    align-items: flex-end;
+    padding: 10px;
+
+    &&::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &&::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+
+    &&::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+
+.trafficChart .column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-right: 5px;
+    height: 100%;
+}
+
+.trafficChart .column h2 span {
+    padding: 10px;
+}
+
+.trafficChart .column h2 {
+    min-width: 20px;
+    min-height: 15px;
+    border-radius: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.trafficChart .column h3,
+.trafficChart .column h4 {
+    color: black;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+.dashboardl {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+}
+
+.dashboardl .charts {
+    width: 100vw;
+}
+
+.dashboardl .chart {
+    width: 100%;
+    height: 500px;
+}
+
+.dashboardl h1 {
+    text-align: center;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.dashboardl .machineInfo {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dashboardl .machineInfo .column {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.dashboardl .machineInfo .column h2 {
+    color: #004c58;
+}
+
+.dashboardl .machineInfo .column .field {
+    display: flex;
+    padding: 10px;
+}
+
+.dashboardl .machineInfo .column .field label {
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+.dashboardl .console {
+    padding: 50px 100px;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.dashboardl .console h2 {
+    width: 100%;
+    font-weight: normal;
+    font-size: 30px;
+    color: black;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dashboardl .console .container {
+    max-height: 500px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border: 1px solid gray;
+    overflow: auto;
+
+    &&::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &&::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+
+    &&::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+
+.dashboardl .console .container .row {
+    padding: 10px 0px;
+}
+
+.dashboardl .console .container .row .info {
+    color: black;
+    letter-spacing: 2px;
+}
+
+.dashboardl .console .container .row .warn {
+    color: orange;
+    letter-spacing: 2px;
+}
+
+.dashboardl .console .container .row .err {
+    color: red;
+    letter-spacing: 2px;
+}
+
+.dashboardl .console .container .row .log {
+    color: black;
+    letter-spacing: 2px;
+}
+
+.dashboardl .console .btns {
+    display: flex;
+}
+
+.dashboardl .console .btns button {
+    margin: 10px;
+    padding: 5px 12px 6px 12px;
+    outline: 2px solid black;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.dashboardl .console .btns button:first-child {
+    margin-left: 0px;
+}
+
+.dashboardl .console .btns button:hover {
+    transform: scale(1.1);
+    background-color: #004c58;
+    box-shadow: 0px 10px 10px #004c587e;
+    border-radius: 0px;
+    outline: 2px solid #004c58;
+    color: white;
+}

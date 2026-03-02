@@ -1,0 +1,23 @@
+# ----------------------------
+# Root-level ignores
+# ----------------------------
+node_modules/
+modules/Server-all/
+
+# ----------------------------
+# BlinkHostFrontend (Angular project)
+# ----------------------------
+BlinkHostFrontend/node_modules/
+BlinkHostFrontend/dist/
+BlinkHostFrontend/.angular/
+BlinkHostFrontend/.vscode/
+
+# Optional Angular caches
+BlinkHostFrontend/.cache/
+BlinkHostFrontend/.eslintcache
+
+# OS / misc
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-error.log*

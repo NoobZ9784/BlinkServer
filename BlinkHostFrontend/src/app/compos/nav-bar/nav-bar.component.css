@@ -1,0 +1,151 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    background-color: #004c58;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    z-index: 10;
+}
+
+nav .left,
+nav .mid,
+nav .right {
+    flex: 1;
+    display: flex;
+}
+
+nav .left {
+    justify-content: flex-start;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .left img {
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+nav .mid {
+    justify-content: center;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+}
+
+nav .right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    letter-spacing: 3px;
+}
+
+nav p {
+    color: white;
+    letter-spacing: 2px;
+}
+
+nav button {
+    background-color: #004c58;
+    color: white;
+    border: 2px solid white;
+    padding: 4px 12px 5px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+nav button:hover {
+    color: #004c58;
+    background-color: white;
+    border-radius: 0px;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.404);
+}
+
+nav .winBtn {
+    width: 60px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+}
+
+nav .winBtn svg {
+    fill: white;
+    height: 15px;
+}
+
+.navSpace {
+    height: 50px;
+    width: 100%;
+}
+
+.closeAskQuestion {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.467);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeAskQuestion .card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeAskQuestion .card h1 {
+    font-weight: normal;
+}
+
+.closeAskQuestion .card button {
+    background-color: white;
+    border: 2px solid #004c58;
+    padding: 5px 12px 6px 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #004c58;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.closeAskQuestion .card button:first-child {
+    margin-left: 0px;
+}
+
+.closeAskQuestion .card button:hover {
+    background-color: #004c58;
+    transform: scale(1.1);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0px 5px 10px #004c587d;
+}

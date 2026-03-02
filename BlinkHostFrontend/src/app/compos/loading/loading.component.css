@@ -1,0 +1,37 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.499);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    z-index: 11;
+}
+
+.loading .card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading .card img {
+    height: 100px;
+    background-color: white;
+}
+
+.loading h2 {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 10px;
+}

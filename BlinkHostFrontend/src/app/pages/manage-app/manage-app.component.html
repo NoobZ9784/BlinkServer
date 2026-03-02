@@ -1,0 +1,92 @@
+<div class="managed" id="manage">
+    <app-nav-bar></app-nav-bar>
+    <app-add-new-project [showNewProjectCard]="showAddNewProjectCard"
+        (addNewProject)="addNewProject($event)"></app-add-new-project>
+    <app-yes-no-question [question]="yesNoQuestion" (userAnswer)="yesNoQuestionAnswers($event)"></app-yes-no-question>
+    <app-edit-a-project [projectOldData]="editProjectData"
+        (saveProjectDetails)="saveEditedProjectData($event)"></app-edit-a-project>
+    <app-back-to-home></app-back-to-home>
+    <h1>Manage Projects</h1>
+    <h3>
+        This build is not a production ready build. It is just a demonstration of its working.
+    </h3>
+    <div class="btnsPanel">
+        <h3>Total {{totalNumberOfProjects}} project{{(totalNumberOfProjects<=1)?' is deployed':'s are deployed'}}.
+                Running projects ( {{runningProjcets}} ) & stopped projects ( {{stopedProjects}} ).</h3>
+                <div class="btns">
+                    <button title="Add new project" (click)="showAddNewProjectCard = true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                        </svg>
+                        <div class="toolTipR">
+                            <div class="corner"></div>
+                            <div class="text">Add new project</div>
+                        </div>
+                    </button>
+                    <button title="Reload projects list" (click)="loadServersList()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z" />
+                        </svg>
+                        <div class="toolTipR">
+                            <div class="corner"></div>
+                            <div class="text">Reload projects list</div>
+                        </div>
+                    </button>
+                    <button title="Run all stopped projects"
+                        (click)="yesNoQuestion={title:'start-all-servers',que:'Are you sure you want to start all servers?',data:{}}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" />
+                        </svg>
+                        <div class="toolTipR">
+                            <div class="corner"></div>
+                            <div class="text">Run all stopped projects</div>
+                        </div>
+                    </button>
+                    <button title="Stop all running projects"
+                        (click)="yesNoQuestion={title:'close-all-servers',que:'Are you sure you want to stop all servers?',data:{}}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM192 160H320c17.7 0 32 14.3 32 32V320c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V192c0-17.7 14.3-32 32-32z" />
+                        </svg>
+                        <div class="toolTipR">
+                            <div class="corner"></div>
+                            <div class="text">Stop all running projects</div>
+                        </div>
+                    </button>
+                </div>
+    </div>
+    <div class="appList">
+        <div class="header">
+            <div class="column">name</div>
+            <div class="column">ip</div>
+            <div class="column">port</div>
+            <div class="column">active</div>
+            <div class="column">dynamic routing</div>
+            <div class="column">created date</div>
+            <div class="column" style="padding: 3px;">Action</div>
+        </div>
+        <div class="list">
+            <div class="row" *ngFor="let row of getValueOfObject(appsList); index as i">
+                <div class="column">{{row.name}}</div>
+                <div class="column">{{row.ip}}</div>
+                <div class="column">{{row.port}}</div>
+                <div class="column">{{row.is_Active}}</div>
+                <div class="column">{{row.dynamic_routing}}</div>
+                <div class="column">{{row.created_on}}</div>
+                <div class="column" style="padding: 3px;">
+                    <button (click)="startServer(row)" [disabled]="row.is_Active">start</button>
+                    <button (click)="stopServer(row)" [disabled]="!row.is_Active">stop</button>
+                    <button (click)="restartServer(row)" [disabled]="!row.is_Active">restart</button>
+                    <button [disabled]="row.is_Active" (click)="editProjectData=row">edit</button>
+                    <!-- <button [disabled]="row.is_Active" (click)="editProjectData=row">edit</button> -->
+                    <button [disabled]="row.is_Active"
+                        (click)="yesNoQuestion = {title:'undeploye-a-project',que:'Are you sure you want to undeploye this project?',data:row}">undeploye</button>
+                    <button (click)="openProjectUrl(row)" [disabled]="!row.is_Active">Open</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

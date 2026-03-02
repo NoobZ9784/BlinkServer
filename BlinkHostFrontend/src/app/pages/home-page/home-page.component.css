@@ -1,0 +1,464 @@
+.homed {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.homed .title {
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.334);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.homed .successMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    color: white;
+}
+
+.homed .version {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: rgba(46, 46, 46, 0.552);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.homed .version h2,
+.homed .version h3 {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.homed .about {
+    padding: 50px 100px;
+}
+
+.homed .about .card {
+    border-radius: 20px;
+    background-color: rgba(46, 46, 46, 0.552);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* border: 5px solid #004c58; */
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.homed .about .card img {
+    width: 250px;
+    height: 250px;
+    pointer-events: none;
+}
+
+.homed .about .card .right {
+    width: calc(100% - 300px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.homed .about .card .right .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+}
+
+.homed .about .card .right .btns {
+    margin-left: 50px;
+    display: flex;
+    justify-content: left;
+}
+
+.homed .about .card .right .btns .btn {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    outline: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.homed .about .card .right .btns .btn svg {
+    transition: all 0.3s ease;
+    fill: white;
+    height: 50%;
+    width: 50%;
+}
+
+.homed .about .card .right .btns .btn:hover {
+    background-color: #004c58;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.534);
+    outline: 2px solid #004c58;
+    transform: scale(1.1);
+}
+
+.homed .about .card .right .btns .btn:hover svg {
+    fill: white;
+}
+
+.homed .about .card .right .btns .btn:hover .toolTip {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+.homed .about .card .right ul li {
+    margin-top: 5px;
+    cursor: pointer;
+    list-style: none;
+    text-align: right;
+    color: white;
+}
+
+.homed .about .card .right ul li:hover {
+    text-decoration: underline;
+}
+
+.homed .about .card .right ul h2 {
+    color: white;
+    text-align: right;
+}
+
+.homed .about .card .right .bottom {
+    width: 100%;
+    height: 50%;
+    padding: 10px 50px;
+    margin-top: 10px;
+}
+
+.homed .about .card .right .bottom .content {
+    padding: 10px 20px;
+    background-color: #004c58;
+    border-radius: 10px;
+}
+
+.homed .about .card .right .bottom .content h2 {
+    color: white;
+    letter-spacing: 2px;
+}
+
+.homed .about .card .right .bottom .content p {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.homed .extra {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.homed .extra .card {
+    width: 25%;
+    border: 1px solid gray;
+    min-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(46, 46, 46, 0.552);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.homed .extra .card h3,
+.homed .extra .card h4,
+.homed .extra .card h5,
+.homed .extra .card p,
+.homed .extra .card a {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+
+.homed .extra .card h1 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 25px;
+}
+
+.homed .extra .card h3 {
+    font-size: 15px;
+    color: yellow;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.homed .extra .card a {
+    cursor: pointer;
+    color: red;
+}
+
+.homed .extra .card h5 {
+    font-size: 12px;
+    text-decoration: underline;
+    color: orange;
+    cursor: pointer;
+}
+
+.homed .extra .card h4 {
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+.homel {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.homel .title {
+    text-align: center;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.homel .successMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    color: black;
+}
+
+.homel .version {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.homel .version h2,
+.homel .version h3 {
+    color: black;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.homel .about {
+    padding: 50px 100px;
+}
+
+.homel .about .card {
+    border-radius: 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    width: 100%;
+    /* border: 5px solid #004c58; */
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.homel .about .card img {
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+}
+
+.homel .about .card .right {
+    width: calc(100% - 300px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.homel .about .card .right .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+}
+
+.homel .about .card .right .btns {
+    margin-left: 50px;
+    display: flex;
+    justify-content: left;
+}
+
+.homel .about .card .right .btns .btn {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    outline: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.homel .about .card .right .btns .btn svg {
+    transition: all 0.3s ease;
+    fill: black;
+    height: 50%;
+    width: 50%;
+}
+
+.homel .about .card .right .btns .btn:hover {
+    background-color: #004c58;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.534);
+    outline: 2px solid #004c58;
+    transform: scale(1.1);
+}
+
+.homel .about .card .right .btns .btn:hover svg {
+    fill: white;
+}
+
+.homel .about .card .right .btns .btn:hover .toolTip {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+.homel .about .card .right ul li {
+    margin-top: 5px;
+    cursor: pointer;
+    list-style: none;
+    text-align: right;
+    color: black;
+}
+
+.homel .about .card .right ul li:hover {
+    text-decoration: underline;
+}
+
+.homel .about .card .right ul h2 {
+    color: black;
+    text-align: right;
+}
+
+.homel .about .card .right .bottom {
+    width: 100%;
+    height: 50%;
+    padding: 10px 50px;
+    margin-top: 10px;
+}
+
+.homel .about .card .right .bottom .content {
+    padding: 10px 20px;
+    background-color: #004c58;
+    border-radius: 10px;
+}
+
+.homel .about .card .right .bottom .content h2 {
+    color: white;
+    letter-spacing: 2px;
+}
+
+.homel .about .card .right .bottom .content p {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.homel .extra {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.homel .extra .card {
+    width: 25%;
+    border: 1px solid gray;
+    min-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.homel .extra .card h3,
+.homel .extra .card h4,
+.homel .extra .card h5,
+.homel .extra .card p,
+.homel .extra .card a {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+
+.homel .extra .card h1 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 25px;
+}
+
+.homel .extra .card h3 {
+    font-size: 15px;
+    color: orange;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.homel .extra .card a {
+    cursor: pointer;
+    color: red;
+}
+
+.homel .extra .card h5 {
+    font-size: 12px;
+    text-decoration: underline;
+    color: orangered;
+    cursor: pointer;
+}
+
+.homel .extra .card h4 {
+    font-size: 15px;
+}

@@ -1,0 +1,31 @@
+.navigationBtn {
+    display: flex;
+}
+
+button {
+    padding: 5px 12px 6px 12px;
+    background-color: #004c58;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: white;
+}
+
+button svg {
+    fill: white;
+    height: 20px;
+    margin-right: 10px;
+}
+
+button:hover {
+    border-radius: 0px;
+    box-shadow: 0px 0px 15px 5px #004c588f;
+}
+
+button:active {
+    transform: scale(0.9);
+}

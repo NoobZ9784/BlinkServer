@@ -1,0 +1,14 @@
+#msg {
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.47);
+    color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    position: fixed;
+    z-index: 9;
+    top: 70px;
+    right: 50px;
+    border: 1px solid gray;
+    transition: all 0.3s ease;
+}

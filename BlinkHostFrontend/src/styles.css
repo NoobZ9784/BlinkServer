@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: open-sans;
+    src: url('assets/fonts/open_sans.ttf');
+}
+
+.animate-hide {
+    animation: hideAnimation 0.5s forwards;
+}
+
+.animate-show {
+    animation: showAnimation 0.5s forwards;
+}
+
+@keyframes hideAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open-sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #CADCFC; */
+    background-color: white;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.toolTip {
+    position: absolute;
+    bottom: -38px;
+    left: 5px;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.3s ease 0.2s;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.toolTip .corner {
+    position: absolute;
+    top: -5px;
+    background-color: #004c58;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    left: 20px;
+    z-index: 1;
+}
+
+.toolTip .text {
+    position: relative;
+    z-index: 2;
+    background-color: #004c58;
+    color: white;
+    text-align: center;
+    padding: 2px 20px 3px 20px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.toolTipR {
+    position: absolute;
+    bottom: -38px;
+    right: 5px;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.3s ease 0.2s;
+    transform: translateY(20px);
+}
+
+.toolTipR .corner {
+    position: absolute;
+    top: -5px;
+    background-color: #004c58;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    right: 20px;
+    z-index: 1;
+}
+
+.toolTipR .text {
+    position: relative;
+    z-index: 2;
+    background-color: #004c58;
+    color: white;
+    text-align: center;
+    padding: 2px 20px 3px 20px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.spaceY200X100p {
+    height: 200px;
+    width: 100%;
+}

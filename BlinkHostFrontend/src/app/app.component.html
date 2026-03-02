@@ -1,0 +1,15 @@
+<div class="content" *ngIf="!provider">
+    <h1 class="err">Provider not found</h1>
+    <h2 class="err">Code : 433 (Unauthorized)</h2>
+</div>
+<div class="backVideo">
+    <video autoplay muted loop id="backVideo" *ngIf="provider">
+        <source [src]="(themeModeDark)?'assets/background.mp4':'assets/LightBack.mp4'" type="video/mp4">
+    </video>
+</div>
+<div class="mainContent">
+    <router-outlet id="router" *ngIf="provider"></router-outlet>
+</div>
+<app-soon-page></app-soon-page>
+<app-loading></app-loading>
+<app-show-msg></app-show-msg>

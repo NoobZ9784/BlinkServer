@@ -1,0 +1,49 @@
+.credits {
+    background-color: white;
+    padding: 50px;
+    width: 100vw;
+}
+
+.credits h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* font-weight: normal; */
+    color: #004c58;
+    letter-spacing: 5px;
+}
+
+.credits .field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.credits .field h2 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.credits .field button {
+    background-color: white;
+    color: #004c58;
+    border: 2px solid #004c58;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+
+.credits .field button:hover {
+    background-color: #004c58;
+    border-radius: 0px;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px #004c587c;
+}

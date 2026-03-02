@@ -1,0 +1,9 @@
+<app-nav-bar></app-nav-bar>
+<app-back-to-home></app-back-to-home>
+<div class="credits">
+    <h1>Credits</h1>
+    <div class="field" *ngFor="let credit of credits">
+        <h2>{{credit.title}}</h2>
+        <button (click)="openUrl(credit.url)">Visit Site</button>
+    </div>
+</div>

@@ -1,0 +1,277 @@
+.settingsd {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.settingsd h1 {
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.334);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.settingsd .buttonPanel {
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 30, 0.448);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.settingsd .buttonPanel h2 {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+
+.settingsd .btns button {
+    padding: 8px 20px 4px 20px;
+    border-radius: 10px;
+    background-color: #004c58;
+    outline: 2px solid white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.settingsd .btns button svg {
+    transition: all 0.3s ease;
+    height: 30px;
+    fill: white;
+}
+
+.settingsd .btns button:hover {
+    outline: 2px solid white;
+    background-color: black;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.571);
+}
+
+.settingsd .btns button:hover .toolTip {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.settingsd .panel {
+    margin: 0px 100px;
+}
+
+.settingsd .panel .card {
+    border: 1px solid gray;
+    background-color: rgba(30, 30, 30, 0.448);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.settingsd .panel .card .field {
+    display: flex;
+    width: 100%;
+}
+
+.settingsd .panel .card .field .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+}
+
+.settingsd .panel .card .field .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.settingsd .panel .card .field h2 {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.settingsd .panel .card .field select {
+    padding: 7px 12px 8px 12px;
+    border: 2px solid white;
+    outline: none;
+    background-color: #004c58;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+}
+
+.settingsd .panel .card .field .inpNum {
+    width: 200px;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    -moz-appearance: textfield;
+    padding: 7px 12px 8px 12px;
+}
+
+.settingsd .panel .card .field .inpNum::-webkit-outer-spin-button,
+.settingsd .panel .card .field .inpNum::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+.settingsl {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.settingsl h1 {
+    text-align: center;
+    font-weight: normal;
+    color: black;
+    padding: 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.settingsl .buttonPanel {
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: rgba(176, 176, 176, 0.135);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid gray;
+}
+
+.settingsl .buttonPanel h2 {
+    color: black;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+
+.settingsl .btns button {
+    padding: 8px 20px 4px 20px;
+    border-radius: 10px;
+    background-color: #004c58;
+    outline: 2px solid white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.settingsl .btns button svg {
+    transition: all 0.3s ease;
+    height: 30px;
+    fill: white;
+}
+
+.settingsl .btns button:hover {
+    outline: 2px solid white;
+    background-color: black;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.571);
+}
+
+.settingsl .btns button:hover .toolTip {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.settingsl .panel {
+    margin: 0px 100px;
+}
+
+.settingsl .panel .card {
+    border: 1px solid gray;
+    background-color: rgba(176, 176, 176, 0.135);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.settingsl .panel .card .field {
+    display: flex;
+    width: 100%;
+}
+
+.settingsl .panel .card .field .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+}
+
+.settingsl .panel .card .field .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.settingsl .panel .card .field h2 {
+    color: black;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.settingsl .panel .card .field select {
+    padding: 7px 12px 8px 12px;
+    border: 2px solid black;
+    outline: none;
+    background-color: #004c58;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+}
+
+.settingsl .panel .card .field .inpNum {
+    width: 200px;
+    outline: none;
+    border: 2px solid black;
+    color: black;
+    background-color: transparent;
+    -moz-appearance: textfield;
+    padding: 7px 12px 8px 12px;
+}
+
+.settingsl .panel .card .field .inpNum::-webkit-outer-spin-button,
+.settingsl .panel .card .field .inpNum::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

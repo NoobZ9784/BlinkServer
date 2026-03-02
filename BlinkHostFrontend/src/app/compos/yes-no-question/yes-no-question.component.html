@@ -1,0 +1,9 @@
+<div class="loading" *ngIf="question.que!==''">
+    <div class="card">
+        <h2>{{question.que}}</h2>
+        <div>
+            <button (click)="userAnswerBtn(false)">No</button>
+            <button (click)="userAnswerBtn(true)">Yes</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="dashboardd" id="dashboard">
+    <app-nav-bar></app-nav-bar>
+    <app-back-to-home></app-back-to-home>
+    <h1>Dashboard</h1>
+    <div class="machineInfo" *ngIf="machineInfo">
+        <div class="column">
+            <h2>CPU & RAM</h2>
+            <div class="field">
+                <label>CPU Info : </label>
+                <span>{{machineInfo.cpuInfo.model}}</span>
+            </div>
+            <div class="field">
+                <label>CPU Available Parallelism : </label>
+                <span>{{machineInfo.cpuAvlParalism}}</span>
+            </div>
+            <div class="field">
+                <label>Total RAM : </label>
+                <span>{{machineInfo.totalMem}} GB</span>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Operating System</h2>
+            <div class="field">
+                <label>OS Platform : </label>
+                <span>{{machineInfo.os}}</span>
+            </div>
+            <div class="field">
+                <label>OS Type : </label>
+                <span>{{machineInfo.osType}}</span>
+            </div>
+            <div class="field">
+                <label>OS Architechture : </label>
+                <span>{{machineInfo.osArch}}</span>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Options</h2>
+            <div class="field">
+                <button>Export</button>
+            </div>
+            <div class="field">
+                <button>Clear</button>
+            </div>
+        </div>
+    </div>
+    <div class="charts">
+        <div class="chart" [chart]="cpuRamChart"></div>
+    </div>
+    <div class="NoRunningServers" *ngIf="getObjectKeys(chartData).length===0">
+        <h2>NO RUNNING SERVERS FOUND</h2>
+    </div>
+    <div class="customChart" *ngIf="getObjectKeys(chartData).length>0">
+        <div class="chartOptions">
+            <select #TrafficChart (change)="tarrficChartSwitch(TrafficChart.value)">
+                <option selected value="ALL">Over All</option>
+                <option *ngFor="let option of getObjectKeys(chartData)" value="{{option}}">{{option}}</option>
+            </select>
+            <h2>{{chartTitle}}</h2>
+        </div>
+        <div class="trafficChart">
+            <div class="column" *ngFor="let column of getReversedData(showChart)">
+                <h3 *ngIf="column.traffic>=0 || selectedChart==='ALL'">{{column.traffic}} Reqs</h3>
+                <h2 [style.height]="getChartBartHight(column.traffic)+'%'"
+                    [style.backgroundColor]="(column.traffic<0)?'orangered':'#004c58'">
+                    <span *ngIf="column.title!==''">{{column.title}}</span>
+                </h2>
+                <h4>{{column.time}}</h4>
+                <h4>{{column.date}}</h4>
+                <!-- <div class="space"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="console">
+        <h2>Blink Console</h2>
+        <div class="btns">
+            <button (click)="saveAsLogs()">Save logs</button>
+        </div>
+        <div class="container">
+            <div class="row" *ngFor="let row of getReversedData(logsData)" [ngSwitch]="row.level">
+                <div class="info" *ngSwitchCase="'info'">INFO : {{row.message}}</div>
+                <div class="warn" *ngSwitchCase="'warn'">WARNING : {{row.message}}</div>
+                <div class="err" *ngSwitchCase="'error'">ERROR : {{row.message}}</div>
+                <div class="log" *ngSwitchDefault>LOG : {{row.message}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="spaceY200X100p"></div>
+</div>

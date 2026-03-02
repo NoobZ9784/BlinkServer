@@ -1,0 +1,337 @@
+.managed {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.managed h1 {
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.334);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.managed h3 {
+    color: white;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.managed .btnsPanel {
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(32, 32, 32, 0.552);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.managed .btnsPanel .btns {
+    display: flex;
+}
+
+.managed .btnsPanel .btns button {
+    padding: 8px 20px 4px 20px;
+    border-radius: 10px;
+    background-color: #004c58;
+    outline: 2px solid white;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.managed .btnsPanel .btns button:first-child {
+    margin-left: 0px;
+}
+
+.managed .btnsPanel .btns button:hover {
+    outline: 2px solid white;
+    background-color: black;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.571);
+}
+
+.managed .btnsPanel .btns button svg {
+    transition: all 0.3s ease;
+    height: 20px;
+    fill: white;
+}
+
+.managed .btnsPanel .btns button:hover .toolTipR {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.managed .appList {
+    background-color: rgba(46, 46, 46, 0.552);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 50px 20px;
+}
+
+.managed .appList .header {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: flex;
+    background-color: black;
+    height: 50px;
+}
+
+.managed .appList .list {
+    border: 1px solid gray;
+}
+
+.managed .appList .header .column {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.managed .appList .column {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.managed .appList .row {
+    display: flex;
+    border-bottom: 1px solid gray;
+    transition: all 0.3s ease;
+}
+
+.managed .appList .row:last-child {
+    border-bottom: none;
+}
+
+.managed .appList .row:nth-child(odd) {
+    background-color: transparent;
+}
+
+.managed .appList .row:hover:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.222);
+}
+
+.managed .appList .row:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.141);
+}
+
+.managed .appList .row:hover:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.222);
+}
+
+.managed .appList .column {
+    border-left: 1px solid gray;
+    color: white;
+}
+
+.managed .appList .column:first-child {
+    border-left: none;
+}
+
+.managed .appList .row .column button {
+    padding: 3px 8px 4px 8px;
+    border: 1px solid black;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.managed .appList .row .column button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+.managel {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.managel h1 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: black;
+    padding: 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    letter-spacing: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.managel h3 {
+    color: black;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.managel .btnsPanel {
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.managel .btnsPanel .btns {
+    display: flex;
+}
+
+.managel .btnsPanel .btns button {
+    padding: 8px 20px 4px 20px;
+    border-radius: 10px;
+    background-color: #004c58;
+    outline: 2px solid white;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.managel .btnsPanel .btns button:first-child {
+    margin-left: 0px;
+}
+
+.managel .btnsPanel .btns button:hover {
+    outline: 2px solid white;
+    background-color: black;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.571);
+}
+
+.managel .btnsPanel .btns button svg {
+    transition: all 0.3s ease;
+    height: 20px;
+    fill: white;
+}
+
+.managel .btnsPanel .btns button:hover .toolTipR {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.managel .appList {
+    background-color: rgba(208, 208, 208, 0.326);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 50px 20px;
+}
+
+.managel .appList .header {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: flex;
+    background-color: black;
+    height: 50px;
+}
+
+.managel .appList .list {
+    border: 1px solid gray;
+}
+
+.managel .appList .header .column {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.managel .appList .column {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.managel .appList .row {
+    display: flex;
+    border-bottom: 1px solid gray;
+    transition: all 0.3s ease;
+}
+
+.managel .appList .row:last-child {
+    border-bottom: none;
+}
+
+.managel .appList .row:nth-child(odd) {
+    background-color: transparent;
+}
+
+.managel .appList .row:hover:nth-child(odd) {
+    background-color: rgba(112, 112, 112, 0.501);
+}
+
+.managel .appList .row:nth-child(even) {
+    background-color: rgba(157, 157, 157, 0.501);
+}
+
+.managel .appList .row:hover:nth-child(even) {
+    background-color: rgba(112, 112, 112, 0.501);
+}
+
+.managel .appList .column {
+    border-left: 1px solid gray;
+    color: black;
+}
+
+.managel .appList .column:first-child {
+    border-left: none;
+}
+
+.managel .appList .row .column button {
+    padding: 3px 8px 4px 8px;
+    border: 1px solid black;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.managel .appList .row .column button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(0.95);
+}

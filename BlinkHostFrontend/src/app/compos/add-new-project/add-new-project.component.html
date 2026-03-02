@@ -1,0 +1,40 @@
+<div class="addNew" [@enterAnimation] *ngIf="showNewProjectCard">
+    <div class="card">
+        <h1>Create new Project</h1>
+        <h2>Your Project name</h2>
+        <p *ngIf="showNameValidationMsg">Name must not be blank</p>
+        <div class="field">
+            <input class="textInp" type="text" placeholder="Project name" #nameInp (keyup)="nameValidation(nameInp)">
+        </div>
+        <h2>IP address (Leave blank if localhost)</h2>
+        <p *ngIf="showIpValidationMsg">Each input length must between 0 - 3</p>
+        <div class="field">
+            <input class="numInp" type="number" placeholder="127" #ip1 (keyup)="ipLengthValidation(ip1)"
+                onkeypress="return !(event.charCode != 8 && event.charCode != 0 && (event.charCode < 48 || event.charCode > 57))">.
+            <input class="numInp" type="number" placeholder="0" #ip2 (keyup)="ipLengthValidation(ip2)"
+                onkeypress="return !(event.charCode != 8 && event.charCode != 0 && (event.charCode < 48 || event.charCode > 57))">.
+            <input class="numInp" type="number" placeholder="0" #ip3 (keyup)="ipLengthValidation(ip3)"
+                onkeypress="return !(event.charCode != 8 && event.charCode != 0 && (event.charCode < 48 || event.charCode > 57))">.
+            <input class="numInp" type="number" placeholder="1" #ip4 (keyup)="ipLengthValidation(ip4)"
+                onkeypress="return !(event.charCode != 8 && event.charCode != 0 && (event.charCode < 48 || event.charCode > 57))">
+        </div>
+        <p *ngIf="showPortNumValidationMsg">Port number must be in between 0 - 65536</p>
+        <div class="field">
+            <h3>Port number</h3>
+            <input class="numInp" type="number" #portnum (keyup)="portNumValidation(portnum)"
+                [style.border]="(showPortNumValidationMsg)?'1px solid red':'1px solid black'" placeholder="3000"
+                onkeypress="return !(event.charCode != 8 && event.charCode != 0 && (event.charCode < 48 || event.charCode > 57))">
+        </div>
+        <div class="field">
+            <h3>Use dynamic routing</h3>
+            <select #staticRouting>
+                <option selected value="n">No</option>
+                <option value="y">Yes</option>
+            </select>
+        </div>
+        <div class="field">
+            <button (click)="cancel()">Cancel</button>
+            <button (click)="saveProject(nameInp,ip1,ip2,ip3,ip4,portnum,staticRouting)">Add Project folder</button>
+        </div>
+    </div>
+</div>
